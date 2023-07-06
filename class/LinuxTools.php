@@ -6,7 +6,7 @@
     $w		= 1				//	Wait 1 sec. / def.by.linux=10sec.
   )
   {
-    exec ( "ping -c 1 {$host}" , $output , $errorlevel );
+    exec ( "ping -c {$w} {$host}" , $output , $errorlevel );
     return $errorlevel ? false : true;
   }
 }?>
